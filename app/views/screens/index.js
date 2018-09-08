@@ -38,7 +38,7 @@ export default (store, Provider) => {
     // Navigation.registerComponent('quidwallet.start.AddWallet.ImportPrivateKey', () => ImportPrivateKeyScreen, store, Provider);
     // Navigation.registerComponent('quidwallet.start.AddWallet.ImportKeystore', () => ImportKeystoreScreen, store, Provider);                
 
-    Navigation.registerComponent('quidwallet.home.wallet.WalletScreen', () => WalletScreen, store, Provider);
+    Navigation.registerComponent('quidwallet.home.wallet.WalletScreen', () => WalletReceiveScreen, store, Provider);
     Navigation.registerComponent('quidwallet.home.wallet.WalletScreen.Drawer', () => WalletScreenDrawer, store, Provider);
     Navigation.registerComponent('quidwallet.home.wallet.WalletSettingsScreen', () => WalletSettingsScreen, store, Provider);            
     Navigation.registerComponent('quidwallet.home.wallet.settings.UnlinkWalletScreen', () => UnlinkWalletScreen, store, Provider);            
