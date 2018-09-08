@@ -1,164 +1,155 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {
-    Button,
-    TextInput,
     Text,
     View,
-    StyleSheet,
-    ScrollView
+    Clipboard,
+    Alert,
+    TouchableOpacity
 } from 'react-native';
-import { TokenRow } from './../../components/tokenRow';
-import { getSelectedCurrency } from 'quid-wallet/app/data/selectors';
-import wrapWithCurrencySwitcher from 'quid-wallet/app/views/components/currency-switcher';
+import QRCode from 'react-native-qrcode';
+
+import TransparentNavBar from 'quid-wallet/app/views/components/TransparentNavBar';
+import styles from './../Receive/styles';
+import { shortAddress } from 'quid-wallet/app/utils';
+import {
+    getActiveWalletTotalBalance,
+    getActiveWallet,
+    getSelectedCurrency
+} from 'quid-wallet/app/data/selectors';
+import { formatToCurrency } from 'quid-wallet/app/utils';
 
 
-const styles = StyleSheet.create({
-    container: {
-	flex: 1,
-	backgroundColor: '#fff',
-    },
-    tokenHeader: {
-	flex: 1,
-	padding: 15
-    },
-    transactionsContainer: {
-	flex: 5,
-	padding: 20
+class SendScreen extends React.Component {    
+    static navigatorStyle = {
+	statusBarTextColorSchemeSingleScreen: 'light',	
+	navBarHidden: true,	
+	screenBackgroundColor: '#fff'
     }
-});
 
+    state = {
+	balanceHidden: true
+    }
+    
+    async _fetchData() {	
+	const { fetchWalletTokens,
+		wallet, navigator } = this.props;
 
-class SendForm extends React.Component {
-     constructor(props) {
-	 super(props);
-	 const isEther = props.token.contractAddress==="0x000_ether";
-	// default wallet config
-	this.state = {
-	    to: "",
-	    amount: "",
-	    gasPrice: 20,
-	    isEther, 
-	    gasLimit: (isEther ? 21000: 61000),
-	    data: "",
-	    error: null,
+	try { 	    
+	    await fetchWalletTokens(wallet.address);
+	} catch(err){
+	    navigator.showInAppNotification({
+		screen: "quidwallet.components.Notification", // unique ID registered with Navigation.registerScreen
+		passProps: {}, // simple serializable object that will pass as props to the lightbox (optional)
+		autoDismissTimerSec: 3 // auto dismiss notification in seconds
+	    });		
 	};
     }
 
-    onSubmit() {
-	this.setState({error: null});
-
-	const { to, amount, gasLimit, gasPrice } = this.state;
-	if (to.length == '') {
-	    this.setState({error: "Please enter correct recipient address." });
-	    return;
-	}
-
-	if (!amount || amount < 0) {	    
-	    this.setState({error: "Please enter correct amount." });
-	    return;
-	}
-
-	if (!gasPrice || gasPrice < 0) {	    
-	    this.setState({error: "Please enter correct gas price." });
-	    return;
-	}
-
-	if (!gasLimit || gasLimit < 0) {	    
-	    this.setState({error: "Please enter correct gas limit." });
-	    return;
-	}
-	
-		
-	this.props.navigator.push({
-	    screen: 'quidwallet.home.wallet.send.WalletSendConfirmScreen',
-	    title: 'Confirm transaction', 
-	    backButtonTitle: "",
-	    navigatorStyle: {		      
-		tabBarHidden: true
-	    },
-	    passProps: {
-		to,
-		amount,
-		gasLimit: parseInt(gasLimit),
-		gasPrice,
-		data: this.state.data,
-		token: this.props.token,
-		isEther: this.state.isEther
-	    } 
-	});	   
+    
+    _copy(value, alertText) {
+	Clipboard.setString(value);
+	Alert.alert(
+	    '',
+	    alertText,
+	);
     }
 
-    
     render() {
-	const { token, currency, isBalanceHidden } = this.props;
-	const errorEl = ((this.state.error) ? <Text style={{color: "red"}}>{this.state.error}</Text>: null);
-	
 	return (
-	    <ScrollView style={styles.container}>
-		<View style={styles.tokenHeader}>
-		  <TokenRow token={token} currency={currency} isBalanceHidden={isBalanceHidden}/>
-		</View>
-		<View style={styles.transactionsContainer}>
-		
-		<Text style={{fontWeight: 'bold'}}>Recepient:</Text>
-		<TextInput
-	    style={{height: 40}}
-	    placeholder="Recipient Address"
-	    onChangeText={(to) => this.setState({to})}/>
-
-		<Text style={{marginTop: 20, fontWeight: 'bold'}}>Amount:</Text>		
-		<TextInput
-	    keyboardType="numeric"
-	    style={{height: 40}}
-	    placeholder="amount, e.g. 5"
-	    value={this.state.amount.toString()}
-	    onChangeText={(amount) => {	
-		if (amount.includes(',')) {
-		    amount = amount.replace(/,/i, '.');
-		}
-		this.setState({amount})
-	    }}/>
-
-		<Text style={{marginTop: 40, fontWeight: 'bold'}}>Gas Limit:</Text>				
-		<TextInput
-	    keyboardType="numeric"	    
-	    style={{height: 40}}
-	    defaultValue={this.state.gasLimit.toString()}
-	    placeholder="Gas limit"
-	    onChangeText={(gasLimit) => this.setState({gasLimit})}/>
-
-		<Text style={{marginTop: 20, fontWeight: 'bold'}}>Gas Price, Gwei:</Text>		
-		<TextInput
-	    keyboardType="numeric"
-	    style={{height: 40}}
-	    placeholder="Gas Price"
-	    defaultValue={this.state.gasPrice.toString()}
-	    onChangeText={(gasPrice) => this.setState({gasPrice})}/>
-
-		{ (this.state.isEther) ?
-		  <View>
-		  <Text style={{marginTop: 20, fontWeight: 'bold'}}>Data:</Text>		
-		  <TextInput
-		  style={{height: 40}}
-		  placeholder="Data (Optional)"
-		  defaultValue={""}
-		  onChangeText={(data) => this.setState({data})}/>
-		  </View> : null }		
-		
-		<Button title="Send" onPress={() => this.onSubmit()}></Button>
-		{ errorEl }
+	    <View style={styles.container}>
+	      <View style={styles.androidBottomMargin}>
+		<TransparentNavBar navigator={this.props.navigator} title="Wallet" />
+	      </View>
+	      { this._renderContent() }
 	    </View>
-		</ScrollView>
-				
+	)
+    }
+
+    _renderInfo() {
+	return (
+	    <View style={{backgroundColor: '#B1F1B8'}}>
+	      <Text style={{fontSize: 18, padding: 15}}>
+		To receive money from someone, copy and send the address below or scan this QR code.
+	      </Text>
+	    </View>	    
+	);
+    }
+
+    _renderBalanceRow() {
+	return (
+	    <TouchableOpacity onPress={() => this.setState({balanceHidden: !this.state.balanceHidden})}
+	      style={{
+		      flexDirection: 'row',
+		      justifyContent: 'center',
+		      marginTop: 30
+		  }}>
+
+	      { this.state.balanceHidden ? 
+		  this._renderBalanceButton() :
+		  this._renderBalanceDigit()
+	      }
+	    </TouchableOpacity>
+	)
+    }
+
+    _renderBalanceButton() {
+	return (
+	      <Text style={{ color: '#232836', borderColor: "#232836", borderWidth: 1, padding: 10, fontSize: 20, fontWeight: 'bold' }}>View balance</Text>
+	);
+    }
+
+    _renderBalanceDigit() {
+	const balance  = formatToCurrency(this.props.totalBalance, this.props.currency);	
+	return (
+	    <Text style={{ color: '#02BF19', padding: 10, fontSize: 20, fontWeight: 'bold' }}>{balance}</Text>
+	)
+    }
+    
+    _renderContent() {
+	const component = this;
+	const { wallet } = this.props;
+	const address = wallet.address;
+	return (
+	    <View style={{
+		flex: 1,
+		backgroundColor: '#fff'
+		  }}>
+	      { this._renderInfo() }
+	      
+		<View style={{
+		    flexDirection: 'row',
+		    justifyContent: 'center',
+		    marginTop: 50
+		      }}>
+
+		  		  
+		  <QRCode
+		     value={ `ethereum:${address}`}
+		     bgColor='#02BF19'
+		     size={240} />
+		</View>
+		<TouchableOpacity onPress={() => component._copy(address, "Address Copied")} style={{marginTop: 10, flexDirection: 'row', width: 250, marginLeft: 80}}>
+		  <Text style={{color: '#02BF19', fontSize: 20, fontWeight: 'bold', marginTop: 5}}>{ shortAddress(address, 5) }</Text>
+		  <View>
+		    <Text style={{ color: '#02BF19', borderColor: "#02BF19", borderWidth: 1, padding: 5, fontSize: 20, fontWeight: 'bold', marginLeft: 10 }}>Copy</Text>
+		  </View>
+	    </TouchableOpacity>
+
+
+		{ this._renderBalanceRow() }
+	    
+	    </View>
 	);
     }
 }
 
-const mapStateToProps = (state, props) => ({
-    currency: getSelectedCurrency(state),
-    isBalanceHidden: state.data.balanceHidden
+
+const mapStateToProps = (state) => ({
+    wallet: getActiveWallet(state),
+    totalBalance: getActiveWalletTotalBalance(state),
+    currency: getSelectedCurrency(state),    
 });
 
 
-export default connect(mapStateToProps)(wrapWithCurrencySwitcher(SendForm));
+export default connect(mapStateToProps)(SendScreen);

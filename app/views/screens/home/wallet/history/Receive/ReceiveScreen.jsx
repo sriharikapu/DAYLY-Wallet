@@ -21,7 +21,6 @@ import {
 import { formatToCurrency } from 'quid-wallet/app/utils';
 
 
-
 class ReceiveScreen extends React.Component {    
     static navigatorStyle = {
 	statusBarTextColorSchemeSingleScreen: 'light',	
@@ -61,7 +60,7 @@ class ReceiveScreen extends React.Component {
 	return (
 	    <View style={styles.container}>
 	      <View style={styles.androidBottomMargin}>
-		<TransparentNavBar navigator={this.props.navigator} title="Portfolio" />
+		<TransparentNavBar navigator={this.props.navigator} title="Wallet" />
 	      </View>
 	      { this._renderContent() }
 	    </View>

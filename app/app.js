@@ -1,17 +1,34 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, Linking } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import store from './data/store';
 import registerScreens from './views/screens';
 
+
+
 registerScreens(store, Provider);
 
 
 export default class App extends React.Component {
-    constructor(props) {	
+    constructor(props) {
 	super(props);
 	store.subscribe(this.onStoreUpdate.bind(this));	
+	// Linking.getInitialURL().then(url => {		
+	//     console.log({url});
+	//     if (url) {
+	
+	//     }
+	// });
+	
+	Linking.addEventListener('url', this.handleOpenURL);
+    }
+    
+    handleOpenURL = (event) => {
+	if (event && event.url) {
+	    //
+	    // redirect here
+	}
     }
     
     onStoreUpdate() {
