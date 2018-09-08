@@ -9,6 +9,7 @@ export default class Wallet extends Model {
 	address: attr(),
 	name: attr(),
 	walletType: attr(),
+	privateKey: attr(),
 	icon: attr(),
 	keystore: attr()
     }
@@ -20,8 +21,13 @@ export default class Wallet extends Model {
 	switch (action.type) {
 	case actions.ADD_WALLET: {
 	    const {
-		address, icon, name,
-		walletType, keystore } = action.payload;
+		address,
+		icon,
+		name,		
+		walletType,
+		privateKey,
+		keystore
+	    } = action.payload;
 	    if (!model.hasId(address)) {
 		return model.create({
 		    id: address,
@@ -29,7 +35,8 @@ export default class Wallet extends Model {
 		    icon,
 		    name,
 		    walletType,
-		    keystore
+		    keystore,
+		    privateKey
 		});
 	    }
 	    return undefined;

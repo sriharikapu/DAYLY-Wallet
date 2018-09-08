@@ -23,6 +23,19 @@ export async function generateOrImportKeystore({password, privateKey=null}) {
     return { keystore, address };    
 }
 
+
+export async function generateKeyPair() {
+    // use private key if it's given, otherwise generate wallet
+    const wallet = await Wallet.generate();
+    
+    // // ensure it doesnt already exist
+    // // let the UI update with a loading spinner...
+    const address = wallet.getChecksumAddressString();
+    const privateKey = wallet.getPrivateKey().toString('hex');
+    return { privateKey, address };    
+};
+
+
 export async function derivePkFromKeystore({keystore, password}) {
     const wallet = await Wallet.fromV3(keystore, password);
     const pk = wallet.getPrivateKey();

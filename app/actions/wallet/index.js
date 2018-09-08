@@ -1,11 +1,15 @@
 export { actions } from './actions';
-export { linkWatchWallet } from './watchWallet';
+
 export {
     fetchWalletTokens,
     selectWallet,
     unlinkWallet
 } from './common';
 
+export {
+    createMetaAccount
+} from './metaWallet';
 
-export { generateKeystore } from './keystoreWallet';
+
+
 

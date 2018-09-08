@@ -1,6 +1,7 @@
 import { Navigation } from 'react-native-navigation';
 //import AddWalletScreen from './start/AddWalletScreen';
-import AddWatchWalletScreen from './start/AddWalletScreen/AddWatchWalletScreen';
+import AddMetaWalletScreen from './start/AddWalletScreen/AddMetaWalletScreen';
+//import AddWatchWalletScreen from './start/AddWalletScreen/AddWatchWalletScreen';
 //import CreateWalletScreen from './start/AddWalletScreen/CreateWalletScreen';
 // import ImportPrivateKeyScreen from './start/AddWalletScreen/ImportPrivateKeyScreen';
 // import ImportKeystoreScreen from './start/AddWalletScreen/ImportKeystoreScreen';
@@ -31,7 +32,7 @@ import CurrencySwitcherIcon from 'quid-wallet/app/views/components/currency-swit
 
 export default (store, Provider) => {
     // SCREENS
-    Navigation.registerComponent('quidwallet.start.AddWallet', () => AddWatchWalletScreen, store, Provider);
+    Navigation.registerComponent('quidwallet.start.AddWallet', () => AddMetaWalletScreen, store, Provider);
     //Navigation.registerComponent('quidwallet.start.AddWallet.AddWatchWallet', () => AddWatchWalletScreen, store, Provider);
     // Navigation.registerComponent('quidwallet.start.AddWallet.CreateWallet', () => CreateWalletScreen, store, Provider);
     // Navigation.registerComponent('quidwallet.start.AddWallet.ImportPrivateKey', () => ImportPrivateKeyScreen, store, Provider);

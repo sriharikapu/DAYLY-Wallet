@@ -1,2 +1,2 @@
-import screen from './AddWalletScreen';
+import screen from './AddMetaWalletScreen';
 export default screen;
