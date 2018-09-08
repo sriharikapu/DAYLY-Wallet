@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "605416164459",
+    "firebase_url": "https://quidwallet-android-production.firebaseio.com",
+    "project_id": "quidwallet-android-production",
+    "storage_bucket": "quidwallet-android-production.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605416164459:android:ff6af9950e74bb76",
+        "android_client_info": {
+          "package_name": "com.quidwallet.quidwalletapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605416164459-jrbjs9hvroirp9qmff2npaeome94plo1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWFcxvsocs4UNGYfyK1odw-jpJ5U1JRGc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

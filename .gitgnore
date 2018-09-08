@@ -1,0 +1,12 @@
+
+*~
+*/*~
+*/#*#
+#*#
+.#*
+
+node_modules/
+ios/build/
+android/build/
+app/.git
+app/.gitignore
