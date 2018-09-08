@@ -51,15 +51,17 @@ class AddWalletScreen extends React.Component {
     render() {	
 	return (
 	    <View style={styles.screen}> 
+	      <View style={styles.header}>
+		<Image style={styles.image} source={require('quid-wallet/app/views/assets/images/dai_start.png')}/>
+	      </View>
 		<View style={styles.content}>
-		    <View style={styles.header}>
-			<Image style={styles.image} source={require('quid-wallet/app/views/assets/images/quid_logo_white.png')}/>
-		    </View>
-		    
+		  
 		    <TextInput
 			style={[
 			    styles.addressInput,
-			    {borderColor: (this.state.error && this.state.error.length > 0 ? '#BD3A52' : '#7C7E86')}
+			    {
+				marginTop: 50,
+				borderColor: (this.state.error && this.state.error.length > 0 ? '#BD3A52' : '#7C7E86')}
 			]}
 			onChangeText={(email) => this._onEmailChange(email)}
 			autoCapitalize='none'

@@ -16,19 +16,15 @@ const styles = StyleSheet.create({
     },
     screen: {
 	flex: 1,
-	justifyContent: 'center',
 	backgroundColor: '#242836' //theme.colors.screen.quid
     },
-    image: {		    
-	marginRight: 20,
+    image: {
+
     },
     header: {
-	alignItems: 'center',
-	marginBottom: 70
     },
     content: {
 	justifyContent: 'center',
-	marginBottom: 120,
 	padding: 10
     },
     save: {
