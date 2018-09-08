@@ -84,7 +84,7 @@ class ReceiveScreen extends React.Component {
 	      style={{
 		      flexDirection: 'row',
 		      justifyContent: 'center',
-		      marginTop: 50
+		      marginTop: 30
 		  }}>
 
 	      { this.state.balanceHidden ? 
@@ -122,7 +122,7 @@ class ReceiveScreen extends React.Component {
 		<View style={{
 		    flexDirection: 'row',
 		    justifyContent: 'center',
-		    marginTop: 100
+		    marginTop: 50
 		      }}>
 
 		  		  
@@ -131,7 +131,7 @@ class ReceiveScreen extends React.Component {
 		     bgColor='#02BF19'
 		     size={240} />
 		</View>
-		<TouchableOpacity onPress={() => component._copy(address, "Address Copied")} style={{marginTop: 10, flexDirection: 'row', width: 250, marginLeft: 90}}>
+		<TouchableOpacity onPress={() => component._copy(address, "Address Copied")} style={{marginTop: 10, flexDirection: 'row', width: 250, marginLeft: 80}}>
 		  <Text style={{color: '#02BF19', fontSize: 20, fontWeight: 'bold', marginTop: 5}}>{ shortAddress(address, 5) }</Text>
 		  <View>
 		    <Text style={{ color: '#02BF19', borderColor: "#02BF19", borderWidth: 1, padding: 5, fontSize: 20, fontWeight: 'bold', marginLeft: 10 }}>Copy</Text>

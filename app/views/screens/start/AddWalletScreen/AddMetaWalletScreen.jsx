@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { View, TextInput, Image, Text } from 'react-native';
+import { View, TextInput, Image, Text, ActivityIndicator } from 'react-native';
 import { Navigation } from 'react-native-navigation';
 import { createMetaAccount } from 'quid-wallet/app/actions/wallet';
 import styles from './styles';
@@ -12,45 +12,37 @@ class AddWalletScreen extends React.Component {
 	statusBarColor: '#242836'
     }
     
-    onNavigatorEvent(event) {
-	if (event.type === 'NavBarButtonPress') { 
-	    if (event.id === 'cancel') {
-		Navigation.dismissAllModals({
-		    animationType: 'slide-down' 
-		});;
-	    }
-	}	
-    }
-    
-    constructor(props) {
-	super(props);
-	this.state = {
-	    email: "",
-	    error: ""
-	};
-	this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
-    }
-
+    state = {
+	email: "",
+	error: "",
+	isDeployingAccount: false
+    };
     
     async submit() {
 	// strip spaces from input string	
 	const email = this.state.email.replace(/\s/g, '');	
 	try {
-	    await this.props.createMetaAccount(email);
+	    this.setState({ isDeployingAccount: true });
+
+	    // stub for waiting till tx is deployed
+	    setTimeout(async () => {
+		this.setState({ isDeployingAccount: true });
+		await this.props.createMetaAccount(email);
+	    }, 3000);
+	    
 	} catch (error) {
 	    this.setState({ error: error.message });		
 	}
     }
-
+   
     
     _onEmailChange(email) {
 	this.setState({email, inputTheme: "bordered", error: ""});
     }
-
     
-    render() {	
+    _renderForm() {	
 	return (
-	    <View style={styles.screen}> 
+	    <View>
 	      <View style={styles.header}>
 		<Image style={styles.image} source={require('quid-wallet/app/views/assets/images/dai_start.png')}/>
 	      </View>
@@ -71,11 +63,30 @@ class AddWalletScreen extends React.Component {
 			autoGrow={true}		      
 			placeholderTextColor="#bcbcbc"
 			underlineColorAndroid="#242836"
-			placeholder='Enter your email'/>
+			placeholder='Your email address'/>
 		    <Text style={styles.textRow}>{this.state.error}</Text>
-		    <Text style={styles.button} onPress={() => this.submit() }>Continue</Text>
+		    <Text style={styles.button} onPress={() => this.submit() }>Get some dollars</Text>
 		    
 		</View>	      
+	    </View>
+	);
+    }
+    
+    render() {
+	return (
+	    <View style={styles.screen}> 	    
+	      { this.state.isDeployingAccount ?
+	      this._renderDeployingAccount() :
+	      this._renderForm() }
+	    </View>	      
+    );
+    }
+
+    _renderDeployingAccount() {
+	return (
+	    <View style={{marginTop: 250}}>
+	      <ActivityIndicator size="large" color="#fff" />
+	      <Text style={{color: 'white', fontSize: 20, fontWeight: 'bold', marginLeft: 80, marginTop: 30}}>Setting up your account...</Text>
 	    </View>
 	);
     }

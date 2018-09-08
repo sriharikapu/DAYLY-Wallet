@@ -8,11 +8,13 @@ const styles = StyleSheet.create({
 	paddingRight: 15,
 	color: '#fff',
 	borderWidth: 1,
-	borderRadius: 10,
 	marginTop: 2,
 	marginBottom: 2,
+	marginLeft: 15,
+	marginRight: 15,
 	fontSize: 16,
-	borderColor: '#7C7E86'
+	borderColor: '#7C7E86',
+	textAlign: 'center'
     },
     screen: {
 	flex: 1,
@@ -45,9 +47,13 @@ const styles = StyleSheet.create({
     },
     button: {
 	textAlign: 'center',	
-	color: '#fff',
+	backgroundColor: '#fff',
+	color: '#232836',
 	fontSize: 20,
-	lineHeight: 44
+	lineHeight: 44,
+	width: 250,
+	marginLeft: 55,
+	fontWeight: 'bold'
     },
     input: {
 	height: 100
