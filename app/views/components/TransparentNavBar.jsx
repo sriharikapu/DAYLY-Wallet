@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { View, StyleSheet, Text, Image, TouchableOpacity, Platform } from 'react-native';
 import { human } from 'react-native-typography';
-import { getWalletIcon } from 'quid-wallet/app/utils/getWalletIcon';
 import CurrencySwitcherIcon from 'quid-wallet/app/views/components/currency-switcher/CurrencySwitcherIcon';
 import { ifIphoneX } from 'react-native-iphone-x-helper';
 import { getActiveWallet } from 'quid-wallet/app/data/selectors';
@@ -47,28 +46,30 @@ const styles = StyleSheet.create({
     },
 });
 
+const SettingsIcon = ({navigator}) => {
+    return (
+	<TouchableOpacity
+	   onPress={() => navigator.push({
+	       screen: "quidwallet.home.wallet.WalletSettingsScreen",
+	       title: "Settings",
+	       navigatorStyle: {		      
+		   tabBarHidden: true
+	       }
+	  })}
+	  style={{paddingRight: 14, paddingTop: 23, paddingLeft: 14}}>
+	  <Image source={require("quid-wallet/app/views/assets/icons/settings.png")} />
+	</TouchableOpacity>
+    );
+}
 
-class TransparentNavBar extends React.PureComponent {
+
+class TransparentNavBar extends React.PureComponent {    
     render() {
-	const { title, walletIcon, navigator } = this.props;
-	let iconAddress;
-	if (walletIcon !== false) {
-	    iconAddress = getWalletIcon(walletIcon);
-	} else {
-	    iconAddress = false;
-	}
+	const { title, navigator } = this.props;
 	return (
 	    <View style={styles.navbarContainer}>
 	      <View style={styles.navbar}>
-		  <TouchableOpacity style={{width: 80}} onPress={() => {
-		      navigator.toggleDrawer({
-			  side: 'left',
-			  animated: true
-		      });}}>
-		      <Image
-			  style={styles.walletIcon}
-			  source={iconAddress} />
-		  </TouchableOpacity>
+		<SettingsIcon navigator={navigator}/>
 		  <Text style={[human.bodyWhite, styles.title]}>{title}</Text>
 		  <CurrencySwitcherIcon navigator={navigator}
 		  color='white'
