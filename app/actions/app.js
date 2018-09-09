@@ -121,7 +121,6 @@ export function selectScreen(screenId) {
 }
 
 
-
 export function claimTokens(url) {
     return (dispatch, getState) => {
 	const host = 'http://localhost:3000';
@@ -131,7 +130,7 @@ export function claimTokens(url) {
 	const claimAmount = 4;
 
 	// #TODO parse transactions
-	const keyParams = '/#/r?v=27&r=0x58cef4e86bdb828fa3f481dc2d3bb5b7e003a6d1a9802f4119e5ea528887f6c4&s=0x7e20c4f3336f235d03f65f2a7592fc79d5123717fc444ad548bdb64634bbd32e&pk=4daa6a4544364d506255944b6933598d52e3ff7caf5a39c8c61d0e184ec6dbc8&c=0x8812948b5a967cf33013f3fd83da9250d3968e78';
+	const keyParams = '/#/r?v=28&r=0xe19c17b8a5d3c21232be574d40455cea90fe4fe614adbc8545eff07274400bde&s=0x3e9a46175ee362b17fee448d80bc7a52b26dbfd29ef97592680a5ab963c3a895&pk=028d4b3f796ef8a458a53f61ba572ec96efccd4bd4d55b4d878e854f7e863881&c=0x8812948b5a967cf33013f3fd83da9250d3968e78';
 	const injectedParams = `&claimAmount=${claimAmount}&tokenSymbol=DAI&tokenAddress=${tokenAddress}&claimAddress=${wallet.address}`;
 	
 	const uri = host + keyParams + injectedParams;

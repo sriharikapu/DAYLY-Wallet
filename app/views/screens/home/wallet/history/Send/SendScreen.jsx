@@ -5,7 +5,9 @@ import {
     View,
     Clipboard,
     Alert,
-    TouchableOpacity
+    TouchableOpacity,
+    TextInput,
+    Button
 } from 'react-native';
 import QRCode from 'react-native-qrcode';
 
@@ -28,7 +30,7 @@ class SendScreen extends React.Component {
     }
 
     state = {
-	balanceHidden: true
+	amount: 0
     }
     
     async _fetchData() {	
@@ -76,34 +78,15 @@ class SendScreen extends React.Component {
 	);
     }
 
-    _renderBalanceRow() {
-	return (
-	    <TouchableOpacity onPress={() => this.setState({balanceHidden: !this.state.balanceHidden})}
-	      style={{
-		      flexDirection: 'row',
-		      justifyContent: 'center',
-		      marginTop: 30
-		  }}>
 
-	      { this.state.balanceHidden ? 
-		  this._renderBalanceButton() :
-		  this._renderBalanceDigit()
-	      }
-	    </TouchableOpacity>
-	)
-    }
-
-    _renderBalanceButton() {
-	return (
-	      <Text style={{ color: '#232836', borderColor: "#232836", borderWidth: 1, padding: 10, fontSize: 20, fontWeight: 'bold' }}>View balance</Text>
-	);
-    }
-
-    _renderBalanceDigit() {
-	const balance  = formatToCurrency(this.props.totalBalance, this.props.currency);	
-	return (
-	    <Text style={{ color: '#02BF19', padding: 10, fontSize: 20, fontWeight: 'bold' }}>{balance}</Text>
-	)
+    onSubmit() {
+	this.props.navigator.push({
+	    screen: "quidwallet.home.wallet.send.WalletSendConfirmScreen",
+	    title: "Settings",
+	    navigatorStyle: {		      
+		tabBarHidden: true
+	    }
+	})
     }
     
     _renderContent() {
@@ -112,33 +95,33 @@ class SendScreen extends React.Component {
 	const address = wallet.address;
 	return (
 	    <View style={{
-		flex: 1,
-		backgroundColor: '#fff'
+		      flex: 1,
+		      backgroundColor: '#fff'
 		  }}>
-	      { this._renderInfo() }
 	      
-		<View style={{
-		    flexDirection: 'row',
-		    justifyContent: 'center',
-		    marginTop: 50
-		      }}>
-
-		  		  
-		  <QRCode
-		     value={ `ethereum:${address}`}
-		     bgColor='#02BF19'
-		     size={240} />
-		</View>
-		<TouchableOpacity onPress={() => component._copy(address, "Address Copied")} style={{marginTop: 10, flexDirection: 'row', width: 250, marginLeft: 80}}>
-		  <Text style={{color: '#02BF19', fontSize: 20, fontWeight: 'bold', marginTop: 5}}>{ shortAddress(address, 5) }</Text>
-		  <View>
-		    <Text style={{ color: '#02BF19', borderColor: "#02BF19", borderWidth: 1, padding: 5, fontSize: 20, fontWeight: 'bold', marginLeft: 10 }}>Copy</Text>
-		  </View>
-	    </TouchableOpacity>
-
-
-		{ this._renderBalanceRow() }
-	    
+		<TextInput
+		   style={{	       
+		       paddingTop: 10,
+		       paddingBottom: 10,
+		       paddingLeft: 15,
+		       paddingRight: 15,
+		       color: '#242836',
+		       borderWidth: 1,
+		       marginTop: 200,
+		       marginBottom: 2,
+		       marginLeft: 15,
+		       marginRight: 15,
+		       fontSize: 16,
+		       borderColor: '#242836',
+		       textAlign: 'center'
+		   }}
+	    placeholder="Amount of $ to send"
+	    onChangeText={(amount) => this.setState({amount})}/>
+	  	  <TouchableOpacity onPress={() => this.onSubmit()} style={{marginTop: 10, flexDirection: 'row', width: 250, marginLeft: 10}}>
+		    <View>
+		      <Text style={{ borderColor: "#242836", borderWidth: 1, backgroundColor: '#242836', color: 'white', padding: 5, fontSize: 20, fontWeight: 'bold', marginLeft: 10 }}>Send</Text>
+		    </View>
+		  </TouchableOpacity>		  	    
 	    </View>
 	);
     }

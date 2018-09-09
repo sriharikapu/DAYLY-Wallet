@@ -82,7 +82,7 @@ export default class App extends React.Component {
 		    	icon: require('quid-wallet/app/views/assets/icons/tabbar/icon_wallet.png'),
 		    },
 		    {
-		    	screen: 'quidwallet.home.portfolio.PortfolioScreen', // unique ID registered with Navigation.registerScreen
+		    	screen: 'quidwallet.home.wallet.send.WalletSendScreen', // unique ID registered with Navigation.registerScreen
 		    	label: 'Send', 
 		    	icon: require('quid-wallet/app/views/assets/icons/tabbar/icon_portfolio.png'),
 		    },
