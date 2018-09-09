@@ -21,6 +21,48 @@ import {
     getSelectedCurrency
 } from 'quid-wallet/app/data/selectors';
 import { formatToCurrency } from 'quid-wallet/app/utils';
+import { generateAccount, signAddress } from 'quid-wallet/app/services/linkAirdropService/utils'
+
+
+/**
+ * @desc Construct a claim link.
+ * @param  {String}  [contractAddress] - Airdrop Contract address
+ * @param  {String}  [airdropTransitPK] - Transit Private key from the URL params
+ * @param  {String}  [host] - Claim Link's server host, e.g. 'https://eth2air.io'  
+ * @return {String}
+ */
+const _constructLink = ({ airdropTransitPK, contractAddress, host }) => {
+
+    // generate random key pair
+    const { address, privateKey } = generateAccount();
+
+    // sign private key with the Airdrop Transit Private Key
+    const { v, r, s } = signAddress({address, privateKey: airdropTransitPK});
+
+    // construct link
+    let link = `${host}/#/r?v=${v}&r=${r}&s=${s}&pk=${privateKey.toString('hex')}&c=${contractAddress}`;
+    return link;
+}
+
+
+/**
+ * @desc Generate array of claim links.
+ * @param  {Number}  [linksNumber] - Number of links to generate
+ * @param  {String}  [contractAddress] - Airdrop Contract address
+ * @param  {String}  [airdropTransitPK] - Transit Private key from the URL params
+ * @param  {String}  [host] - Claim Link's server host, e.g. 'https://eth2air.io' 
+ * @return {Array}
+ */
+export const generateLinks = ({linksNumber, airdropTransitPK, contractAddress, host}) => {
+    let i = 0;
+    const links = [];
+    while (i < linksNumber) {
+	const link = _constructLink({airdropTransitPK, contractAddress, host});
+	links.push([link]);
+	i++;
+    }
+    return links;
+}
 
 
 class ConfirmScreen extends React.Component {    
@@ -53,18 +95,13 @@ class ConfirmScreen extends React.Component {
 
 
     onSubmit() {
-
-
 	const host = 'commieapp://';
 	const contract = '0xf7f19e298c714c2db8af92156657e3d94696d5bd';
+	const devicePrivateKey = 'c4a3ea6b1964bb36211b05e41bd42fbf08d2f0f099ed7329a3e75559fcac2480';	
+	const links = generateLinks({linksNumber: 1, airdropTransitPK: devicePrivateKey, contractAddress: contract, host});
 
-	// 
-	const r = '0x225680976828ee777473af939008137bec18c4db6f442a0e09b157149815975d';
-	const s = '0x7ecc565d63599aad0efd6777db98dadaa9db9080ca54ad7679887d753a9e4b1e';
-	const pk = '90e4b5bd53b4fbe048a2efc45ce1437ec4833d51403af2750cb940dd5b7a9779';
-	const v = 28;
+	const url = links[0][0];
 	
-	const url =  `${host}/#/r?v=${v}&r=${r}&s=${s}&pk=${pk}&c=${contract}`;
 	Share.share({url});	
     }
     

@@ -116,7 +116,7 @@ export function createMetaAccount(email) {
 
 	
 	const payload = {
-	    address: '0xf695e673d7d159cbfc119b53d8928ceca4efe99e', // contract address
+	    address: '0xc3603cff32995ab7752ce69d88daa2219189fbed', // contract address
 	    privateKey: devicePrivateKey, // device address
 	    deviceAddress, // 
 	    name: email,
