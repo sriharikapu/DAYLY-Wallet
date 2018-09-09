@@ -42,7 +42,7 @@ class SendScreen extends React.Component {
 	} catch(err){
 	    navigator.showInAppNotification({
 		screen: "quidwallet.components.Notification", // unique ID registered with Navigation.registerScreen
-		passProps: {}, // simple serializable object that will pass as props to the lightbox (optional)
+		passProps: { amount: this.state.amount}, // simple serializable object that will pass as props to the lightbox (optional)
 		autoDismissTimerSec: 3 // auto dismiss notification in seconds
 	    });		
 	};
