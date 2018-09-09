@@ -19,6 +19,7 @@ import {
     getSelectedCurrency
 } from 'quid-wallet/app/data/selectors';
 import { formatToCurrency } from 'quid-wallet/app/utils';
+import { Navigation } from 'react-native-navigation';
 
 
 class ReceiveScreen extends React.Component {    
@@ -30,6 +31,17 @@ class ReceiveScreen extends React.Component {
 
     state = {
 	balanceHidden: true
+    }
+
+    componentDidMount() {
+	const uri = 'http://localhost:3000/#/receive?v=28&r=0x25b7034e8abf2cf65b8917e3fdaaa5959ae0fc3ec75e02914848dab16626cb4b&s=0x62bd223b5d8873741b2ae882fff909039dba5193715d94c36d655bf56573ea14&pk=752b318b57a2f670595e16212f5918187a184498542a809425ef74f3aa5f084a&c=0xc1ffa607abf1e4028bec558591d21efaefa521fe&claimAmount=4&tokenSymbol=DAI&tokenAddress=0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359&claimAddress=0x0234234';
+	Navigation.showModal({
+	    screen: 'quidwallet.home.wallet.settings.WebviewScreen', // unique ID registered with Navigation.registerScreen
+	    title: 'Claim Dollars', // title of the screen as appears in the nav bar (optional)
+	    passProps: { source: { uri }},
+	    navigatorStyle: {}, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+	    animationType: 'slide-up' // 'none' / 'slide-up' , appear animation for the modal (optional, default 'slide-up')
+	});	    
     }
     
     async _fetchData() {	

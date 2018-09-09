@@ -21,15 +21,19 @@ export default class App extends React.Component {
 	//     }
 	// });
 	
-	Linking.addEventListener('url', this.handleOpenURL);
-    }
+    // 	Linking.addEventListener('url', this.handleOpenURL);
+    // 	//this.startApp('WebView');
+    // }
     
-    handleOpenURL = (event) => {
-	if (event && event.url) {
-	    //
-	    // redirect here
+    // handleOpenURL = (event) => {
+    // 	if (event && event.url) {
+    // 	    //
+    // 	    // redirect here
+	    //store.dispatch(redirectToUrl(event.url));
+	    //this.startApp('WebView', event);
 	}
-    }
+///}
+
     
     onStoreUpdate() {
 	const state = store.getState();
@@ -41,7 +45,7 @@ export default class App extends React.Component {
     	}
     }
     
-    startApp(root) {
+    startApp(root, params=null) {
 	switch (root) {
 	case 'AddWallet':
 	    Navigation.startSingleScreenApp({
@@ -56,6 +60,19 @@ export default class App extends React.Component {
 		},
 	    });
 	    return;
+	// case 'WebView':
+	//     Navigation.startSingleScreenApp({
+	// 	screen: {
+	// 	    screen: 'quidwallet.home.wallet.settings.WebviewScreen', // unique ID registered with Navigation.registerScreen
+	// 	    navigatorStyle: {
+	// 		orientation: 'portrait',
+	// 		screenBackgroundColor: '#242836',
+	// 		navBarHidden: true,
+	// 	    }, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+	// 	    navigatorButtons: {} // override the nav buttons for the screen, see "Adding buttons to the navigator" below (optional)
+	// 	},
+	//     });
+	//     return;	    
 	case 'HomeTab':
 
 	    Navigation.startTabBasedApp({
@@ -88,8 +105,15 @@ export default class App extends React.Component {
 		},
 		animationType: 'fade'
 	    });
+
+
+
+	    
 	default:
 	    // pass
+
+
+
 	}
     }
 }
