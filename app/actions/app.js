@@ -123,7 +123,7 @@ export function selectScreen(screenId) {
 
 export function claimTokens(deeplink) {
     return (dispatch, getState) => {
-	const host = 'http://localhost:3000';
+	const host = 'http://10.0.4.9:3000';
 	
 	const url = deeplink.substring(12);
 	
