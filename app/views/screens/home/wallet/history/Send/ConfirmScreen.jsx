@@ -55,7 +55,7 @@ class ConfirmScreen extends React.Component {
     onSubmit() {
 
 
-	const host = 'commieapp://http://localhost:3000';
+	const host = 'commieapp://';
 	const contract = '0xf7f19e298c714c2db8af92156657e3d94696d5bd';
 
 	// 
@@ -64,7 +64,7 @@ class ConfirmScreen extends React.Component {
 	const pk = '90e4b5bd53b4fbe048a2efc45ce1437ec4833d51403af2750cb940dd5b7a9779';
 	const v = 28;
 	
-	const url =  `${host}}/#/r?v=${v}&r=${r}&s=${s}&pk=${pk}&c=${contract}`;
+	const url =  `${host}/#/r?v=${v}&r=${r}&s=${s}&pk=${pk}&c=${contract}`;
 	Share.share({url});	
     }
     

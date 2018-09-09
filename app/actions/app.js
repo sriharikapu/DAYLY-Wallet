@@ -121,19 +121,20 @@ export function selectScreen(screenId) {
 }
 
 
-export function claimTokens(url) {
+export function claimTokens(deeplink) {
     return (dispatch, getState) => {
 	const host = 'http://localhost:3000';
-
+	
+	const url = deeplink.substring(12);
+	
 	const wallet = getActiveWallet(getState());
 	const tokenAddress = '0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359'; // DAI
-	const claimAmount = 4;
+	const claimAmount = 10;
 
 	// #TODO parse transactions
-	const keyParams = '/#/r?v=28&r=0xe19c17b8a5d3c21232be574d40455cea90fe4fe614adbc8545eff07274400bde&s=0x3e9a46175ee362b17fee448d80bc7a52b26dbfd29ef97592680a5ab963c3a895&pk=028d4b3f796ef8a458a53f61ba572ec96efccd4bd4d55b4d878e854f7e863881&c=0x8812948b5a967cf33013f3fd83da9250d3968e78';
 	const injectedParams = `&claimAmount=${claimAmount}&tokenSymbol=DAI&tokenAddress=${tokenAddress}&claimAddress=${wallet.address}`;
 	
-	const uri = host + keyParams + injectedParams;
+	const uri = host + url + injectedParams;
 	console.log(uri);
 	Navigation.showModal({
 	    screen: 'quidwallet.home.wallet.settings.WebviewScreen', // unique ID registered with Navigation.registerScreen
