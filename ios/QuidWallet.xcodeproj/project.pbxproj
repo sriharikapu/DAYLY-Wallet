@@ -36,62 +36,33 @@
 		741205F4208A77F700ED5FCC /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0352072F23A00026625 /* FirebaseCoreDiagnostics.framework */; };
 		74136DA51FD9A7CB00AE7B98 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136DA31FD9A7CA00AE7B98 /* Crashlytics.framework */; };
 		74136DA61FD9A7CB00AE7B98 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136DA31FD9A7CA00AE7B98 /* Crashlytics.framework */; };
-		74136DA71FD9A7CB00AE7B98 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136DA31FD9A7CA00AE7B98 /* Crashlytics.framework */; };
 		74136DA81FD9A7CB00AE7B98 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136DA41FD9A7CB00AE7B98 /* Fabric.framework */; };
 		74136DA91FD9A7CB00AE7B98 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136DA41FD9A7CB00AE7B98 /* Fabric.framework */; };
-		74136DAA1FD9A7CB00AE7B98 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136DA41FD9A7CB00AE7B98 /* Fabric.framework */; };
 		74136DB71FD9AD4200AE7B98 /* libSMXCrashlytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136D121FD9879500AE7B98 /* libSMXCrashlytics.a */; };
-		74136DB81FD9B18400AE7B98 /* libSMXCrashlytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136D121FD9879500AE7B98 /* libSMXCrashlytics.a */; };
 		74136DB91FD9B18F00AE7B98 /* libthird-party.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 740EE42C1FBF29580053EE0B /* libthird-party.a */; };
-		7425A91B1FDA107A00A33A81 /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7432D5DC1FD9F50C0036FAE6 /* libRNSentry.a */; };
 		7432D5E11FD9F6D00036FAE6 /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7432D5DC1FD9F50C0036FAE6 /* libRNSentry.a */; };
 		744889DA20727AF300C1383D /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323AE1FDEAB35000ED79E /* libRNFirebase.a */; };
 		7455366C2021EFD500E1CABD /* preloader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455363D2021EFD400E1CABD /* preloader@2x.png */; };
 		7455366D2021EFD500E1CABD /* preloader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455363D2021EFD400E1CABD /* preloader@2x.png */; };
-		7455366E2021EFD500E1CABD /* preloader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455363D2021EFD400E1CABD /* preloader@2x.png */; };
-		74553689202226D500E1CABD /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 740B882F20101B2900F6A2F0 /* libRNVectorIcons.a */; };
-		745536B72022272900E1CABD /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4523C8EBACCD42A3872F637B /* MaterialIcons.ttf */; };
-		745536B82022273000E1CABD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F12AFF8FACA4CCCB95F5C8B /* FontAwesome.ttf */; };
-		745536B92022273C00E1CABD /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAC6D3D7D1324316A0561B58 /* EvilIcons.ttf */; };
-		745536BA20222D3F00E1CABD /* libthird-party.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 740EE42C1FBF29580053EE0B /* libthird-party.a */; };
 		745536EE2022382200E1CABD /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 740B882F20101B2900F6A2F0 /* libRNVectorIcons.a */; };
 		7455371D2022385E00E1CABD /* libthird-party.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 740EE42C1FBF29580053EE0B /* libthird-party.a */; };
 		7455371E2022387200E1CABD /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4523C8EBACCD42A3872F637B /* MaterialIcons.ttf */; };
 		7455371F2022387900E1CABD /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAC6D3D7D1324316A0561B58 /* EvilIcons.ttf */; };
 		745537202022388100E1CABD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F12AFF8FACA4CCCB95F5C8B /* FontAwesome.ttf */; };
 		745ED0362072F23A00026625 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED02F2072F23A00026625 /* FirebaseCore.framework */; };
-		745ED0392072F23A00026625 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED02F2072F23A00026625 /* FirebaseCore.framework */; };
 		745ED03A2072F23A00026625 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0302072F23A00026625 /* FirebaseAnalytics.framework */; };
-		745ED03D2072F23A00026625 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0302072F23A00026625 /* FirebaseAnalytics.framework */; };
 		745ED03E2072F23A00026625 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0322072F23A00026625 /* FirebaseMessaging.framework */; };
-		745ED0412072F23A00026625 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0322072F23A00026625 /* FirebaseMessaging.framework */; };
 		745ED0422072F23A00026625 /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0332072F23A00026625 /* FirebaseNanoPB.framework */; };
-		745ED0452072F23A00026625 /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0332072F23A00026625 /* FirebaseNanoPB.framework */; };
 		745ED0462072F23A00026625 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0342072F23A00026625 /* FirebaseInstanceID.framework */; };
-		745ED0492072F23A00026625 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0342072F23A00026625 /* FirebaseInstanceID.framework */; };
 		745ED04A2072F23A00026625 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0352072F23A00026625 /* FirebaseCoreDiagnostics.framework */; };
-		745ED04D2072F23A00026625 /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0352072F23A00026625 /* FirebaseCoreDiagnostics.framework */; };
-		7461B919207D594200209D97 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323AE1FDEAB35000ED79E /* libRNFirebase.a */; };
 		747323C71FDEAF28000ED79E /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323B61FDEAF27000ED79E /* nanopb.framework */; };
 		747323C81FDEAF28000ED79E /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323B61FDEAF27000ED79E /* nanopb.framework */; };
-		747323C91FDEAF28000ED79E /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323B61FDEAF27000ED79E /* nanopb.framework */; };
 		747323CA1FDEAF28000ED79E /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323B71FDEAF27000ED79E /* GoogleToolboxForMac.framework */; };
 		747323CB1FDEAF28000ED79E /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323B71FDEAF27000ED79E /* GoogleToolboxForMac.framework */; };
-		747323CC1FDEAF28000ED79E /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323B71FDEAF27000ED79E /* GoogleToolboxForMac.framework */; };
 		747324331FDEBFB8000ED79E /* firebaseConfigs in Resources */ = {isa = PBXBuildFile; fileRef = 747324311FDEBFB8000ED79E /* firebaseConfigs */; };
-		747324341FDEBFB8000ED79E /* firebaseConfigs in Resources */ = {isa = PBXBuildFile; fileRef = 747324311FDEBFB8000ED79E /* firebaseConfigs */; };
-		7497AC4E207E2AD9000C0CFF /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED02F2072F23A00026625 /* FirebaseCore.framework */; };
-		7497AC4F207E2AD9000C0CFF /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0302072F23A00026625 /* FirebaseAnalytics.framework */; };
-		7497AC50207E2AD9000C0CFF /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0322072F23A00026625 /* FirebaseMessaging.framework */; };
-		7497AC51207E2AD9000C0CFF /* FirebaseNanoPB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0332072F23A00026625 /* FirebaseNanoPB.framework */; };
-		7497AC52207E2AD9000C0CFF /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0342072F23A00026625 /* FirebaseInstanceID.framework */; };
-		7497AC53207E2AD9000C0CFF /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745ED0352072F23A00026625 /* FirebaseCoreDiagnostics.framework */; };
-		7497AC54207E2AE4000C0CFF /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323AE1FDEAB35000ED79E /* libRNFirebase.a */; };
 		74C2CB691FDB1FAD00C2E3CC /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C2CB681FDB1CFB00C2E3CC /* libReactNativeConfig.a */; };
-		74C2CB6A1FDB23E900C2E3CC /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C2CB681FDB1CFB00C2E3CC /* libReactNativeConfig.a */; };
 		74F151EC1FD6DC1000A11B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F151EB1FD6DC1000A11B4F /* LaunchScreen.storyboard */; };
 		74F151ED1FD6DC1000A11B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F151EB1FD6DC1000A11B4F /* LaunchScreen.storyboard */; };
-		74F151EE1FD6DC1000A11B4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F151EB1FD6DC1000A11B4F /* LaunchScreen.storyboard */; };
 		74F4EDB51FD56E000047A2E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		74F4EDB61FD56E000047A2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		74F4EDB81FD56E000047A2E4 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C09CAC561E7AC596002D6CC6 /* libRCTAnimation.a */; };
@@ -112,67 +83,10 @@
 		74F4EDCC1FD56E000047A2E4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC04A22B6DD4C73BEDE4859 /* libz.tbd */; };
 		74F4EDCD1FD56E000047A2E4 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1099E1CA974AC0B5AE3CD4 /* libRNDeviceInfo.a */; };
 		74F4EDCF1FD56E000047A2E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		74F4EE081FD5706D0047A2E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		74F4EE091FD5706D0047A2E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		74F4EE0C1FD5706D0047A2E4 /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BB634D1E792EC30071665B /* libReactNativeNavigation.a */; };
-		74F4EE0D1FD5706D0047A2E4 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		74F4EE0E1FD5706D0047A2E4 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
-		74F4EE0F1FD5706D0047A2E4 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
-		74F4EE101FD5706D0047A2E4 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
-		74F4EE111FD5706D0047A2E4 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
-		74F4EE121FD5706D0047A2E4 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
-		74F4EE131FD5706D0047A2E4 /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
-		74F4EE141FD5706D0047A2E4 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		74F4EE151FD5706D0047A2E4 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		74F4EE161FD5706D0047A2E4 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
-		74F4EE171FD5706D0047A2E4 /* libRNRandomBytes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D834ED1D02B24FB1A72CE727 /* libRNRandomBytes.a */; };
-		74F4EE181FD5706D0047A2E4 /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A7C2DF196A4AADB841FD7F /* libRNSVG.a */; };
-		74F4EE191FD5706D0047A2E4 /* libTcpSockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD863B431104532B1A730BA /* libTcpSockets.a */; };
-		74F4EE1F1FD5706D0047A2E4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC04A22B6DD4C73BEDE4859 /* libz.tbd */; };
-		74F4EE201FD5706D0047A2E4 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1099E1CA974AC0B5AE3CD4 /* libRNDeviceInfo.a */; };
-		74F4EE221FD5706D0047A2E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		74F5A8851FDF3A5100D813ED /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5A8811FDF3A5100D813ED /* Protobuf.framework */; };
 		74F5A8861FDF3A5100D813ED /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5A8811FDF3A5100D813ED /* Protobuf.framework */; };
-		74F5A8871FDF3A5100D813ED /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5A8811FDF3A5100D813ED /* Protobuf.framework */; };
-		74FDEFEB206000F90085132E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		74FDEFEC206000F90085132E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		74FDEFEE206000F90085132E /* libthird-party.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 740EE42C1FBF29580053EE0B /* libthird-party.a */; };
-		74FDEFF0206000F90085132E /* libReactNativeConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C2CB681FDB1CFB00C2E3CC /* libReactNativeConfig.a */; };
-		74FDEFF1206000F90085132E /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F5A8811FDF3A5100D813ED /* Protobuf.framework */; };
-		74FDEFF3206000F90085132E /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7432D5DC1FD9F50C0036FAE6 /* libRNSentry.a */; };
-		74FDEFF4206000F90085132E /* libSMXCrashlytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136D121FD9879500AE7B98 /* libSMXCrashlytics.a */; };
-		74FDEFF6206000F90085132E /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C09CAC561E7AC596002D6CC6 /* libRCTAnimation.a */; };
-		74FDEFF8206000F90085132E /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0BB634D1E792EC30071665B /* libReactNativeNavigation.a */; };
-		74FDEFF9206000F90085132E /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136DA31FD9A7CA00AE7B98 /* Crashlytics.framework */; };
-		74FDEFFA206000F90085132E /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		74FDEFFB206000F90085132E /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
-		74FDEFFC206000F90085132E /* nanopb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323B61FDEAF27000ED79E /* nanopb.framework */; };
-		74FDEFFD206000F90085132E /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
-		74FDEFFE206000F90085132E /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
-		74FDEFFF206000F90085132E /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
-		74FDF001206000F90085132E /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
-		74FDF002206000F90085132E /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
-		74FDF003206000F90085132E /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		74FDF004206000F90085132E /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74136DA41FD9A7CB00AE7B98 /* Fabric.framework */; };
-		74FDF005206000F90085132E /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		74FDF006206000F90085132E /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
-		74FDF007206000F90085132E /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 747323B71FDEAF27000ED79E /* GoogleToolboxForMac.framework */; };
-		74FDF00A206000F90085132E /* libRNSVG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0A7C2DF196A4AADB841FD7F /* libRNSVG.a */; };
-		74FDF00B206000F90085132E /* libTcpSockets.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD863B431104532B1A730BA /* libTcpSockets.a */; };
-		74FDF00D206000F90085132E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC04A22B6DD4C73BEDE4859 /* libz.tbd */; };
-		74FDF00E206000F90085132E /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1099E1CA974AC0B5AE3CD4 /* libRNDeviceInfo.a */; };
-		74FDF010206000F90085132E /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAC6D3D7D1324316A0561B58 /* EvilIcons.ttf */; };
-		74FDF011206000F90085132E /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F12AFF8FACA4CCCB95F5C8B /* FontAwesome.ttf */; };
-		74FDF012206000F90085132E /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4523C8EBACCD42A3872F637B /* MaterialIcons.ttf */; };
-		74FDF013206000F90085132E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		74FDF014206000F90085132E /* firebaseConfigs in Resources */ = {isa = PBXBuildFile; fileRef = 747324311FDEBFB8000ED79E /* firebaseConfigs */; };
-		74FDF015206000F90085132E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F151EB1FD6DC1000A11B4F /* LaunchScreen.storyboard */; };
-		74FDF016206000F90085132E /* preloader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7455363D2021EFD400E1CABD /* preloader@2x.png */; };
 		74FDF0EE2065BBC70085132E /* libRNFastCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDF0ED2065BB9D0085132E /* libRNFastCrypto.a */; };
-		74FDF0EF2065BF2A0085132E /* libRNFastCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDF0ED2065BB9D0085132E /* libRNFastCrypto.a */; };
-		74FDF0F02065BF380085132E /* libRNFastCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDF0ED2065BB9D0085132E /* libRNFastCrypto.a */; };
 		74FDF0F12065BF470085132E /* libRNFastCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDF0ED2065BB9D0085132E /* libRNFastCrypto.a */; };
-		74FDF1082065C78E0085132E /* libRNRandomBytes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FDF1072065C7810085132E /* libRNRandomBytes.a */; };
 		767D673D1C734D87AA2927AE /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 152133B445034319826EAA24 /* Ionicons.ttf */; };
 		81893273AE3D4DC79314C59E /* libRNSentry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26EDA48458324C63802A9A9B /* libRNSentry.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -609,11 +523,9 @@
 		74F151EB1FD6DC1000A11B4F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = QuidWallet/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74F4EDD81FD56E000047A2E4 /* Q-DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q-DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F4EDD91FD56E000047A2E4 /* Info-dev.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-dev.plist"; path = "/Users/mikhail/quid-wallet/ios/Info-dev.plist"; sourceTree = "<absolute>"; };
-		74F4EE2B1FD5706D0047A2E4 /* Q-STAGING.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q-STAGING.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F4EE2C1FD5706D0047A2E4 /* Info-staging.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-staging.plist"; path = "/Users/mikhail/quid-wallet/ios/Info-staging.plist"; sourceTree = "<absolute>"; };
 		74F5A8811FDF3A5100D813ED /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Protobuf.framework; sourceTree = "<group>"; };
 		74F5A8881FDF3DA400D813ED /* Q-STAGING.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Q-STAGING.entitlements"; sourceTree = "<group>"; };
-		74FDF01F206000F90085132E /* Q-ROPSTEN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Q-ROPSTEN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74FDF020206000F90085132E /* Q-STAGING copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Q-STAGING copy-Info.plist"; path = "/Users/mikhail/quid-wallet/ios/Q-STAGING copy-Info.plist"; sourceTree = "<absolute>"; };
 		74FDF0E82065BB9D0085132E /* RNFastCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFastCrypto.xcodeproj; path = "../node_modules/react-native-fast-crypto/ios/RNFastCrypto.xcodeproj"; sourceTree = "<group>"; };
 		74FDF1022065C7800085132E /* RNRandomBytes.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNRandomBytes.xcodeproj; path = "../node_modules/react-native-secure-randombytes/RNRandomBytes.xcodeproj"; sourceTree = "<group>"; };
@@ -727,88 +639,6 @@
 				745ED04A2072F23A00026625 /* FirebaseCoreDiagnostics.framework in Frameworks */,
 				74F5A8851FDF3A5100D813ED /* Protobuf.framework in Frameworks */,
 				A8AD6AC990C9498D865D6423 /* libRNVectorIcons.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74F4EE0A1FD5706D0047A2E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7497AC54207E2AE4000C0CFF /* libRNFirebase.a in Frameworks */,
-				74FDF0F02065BF380085132E /* libRNFastCrypto.a in Frameworks */,
-				745536BA20222D3F00E1CABD /* libthird-party.a in Frameworks */,
-				74553689202226D500E1CABD /* libRNVectorIcons.a in Frameworks */,
-				74C2CB6A1FDB23E900C2E3CC /* libReactNativeConfig.a in Frameworks */,
-				74F5A8871FDF3A5100D813ED /* Protobuf.framework in Frameworks */,
-				7425A91B1FDA107A00A33A81 /* libRNSentry.a in Frameworks */,
-				74136DB81FD9B18400AE7B98 /* libSMXCrashlytics.a in Frameworks */,
-				74F4EE0C1FD5706D0047A2E4 /* libReactNativeNavigation.a in Frameworks */,
-				74136DA71FD9A7CB00AE7B98 /* Crashlytics.framework in Frameworks */,
-				7497AC4E207E2AD9000C0CFF /* FirebaseCore.framework in Frameworks */,
-				7497AC4F207E2AD9000C0CFF /* FirebaseAnalytics.framework in Frameworks */,
-				7497AC50207E2AD9000C0CFF /* FirebaseMessaging.framework in Frameworks */,
-				7497AC51207E2AD9000C0CFF /* FirebaseNanoPB.framework in Frameworks */,
-				7497AC52207E2AD9000C0CFF /* FirebaseInstanceID.framework in Frameworks */,
-				7497AC53207E2AD9000C0CFF /* FirebaseCoreDiagnostics.framework in Frameworks */,
-				74F4EE0D1FD5706D0047A2E4 /* libReact.a in Frameworks */,
-				74F4EE0E1FD5706D0047A2E4 /* libRCTActionSheet.a in Frameworks */,
-				747323C91FDEAF28000ED79E /* nanopb.framework in Frameworks */,
-				74F4EE0F1FD5706D0047A2E4 /* libRCTGeolocation.a in Frameworks */,
-				74F4EE101FD5706D0047A2E4 /* libRCTImage.a in Frameworks */,
-				74F4EE111FD5706D0047A2E4 /* libRCTLinking.a in Frameworks */,
-				74F4EE121FD5706D0047A2E4 /* libRCTNetwork.a in Frameworks */,
-				74F4EE131FD5706D0047A2E4 /* libRCTSettings.a in Frameworks */,
-				74F4EE141FD5706D0047A2E4 /* libRCTText.a in Frameworks */,
-				74136DAA1FD9A7CB00AE7B98 /* Fabric.framework in Frameworks */,
-				74F4EE151FD5706D0047A2E4 /* libRCTVibration.a in Frameworks */,
-				74F4EE161FD5706D0047A2E4 /* libRCTWebSocket.a in Frameworks */,
-				747323CC1FDEAF28000ED79E /* GoogleToolboxForMac.framework in Frameworks */,
-				74F4EE171FD5706D0047A2E4 /* libRNRandomBytes.a in Frameworks */,
-				74F4EE181FD5706D0047A2E4 /* libRNSVG.a in Frameworks */,
-				74F4EE191FD5706D0047A2E4 /* libTcpSockets.a in Frameworks */,
-				74F4EE1F1FD5706D0047A2E4 /* libz.tbd in Frameworks */,
-				74F4EE201FD5706D0047A2E4 /* libRNDeviceInfo.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74FDEFED206000F90085132E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7461B919207D594200209D97 /* libRNFirebase.a in Frameworks */,
-				74FDF1082065C78E0085132E /* libRNRandomBytes.a in Frameworks */,
-				74FDF0EF2065BF2A0085132E /* libRNFastCrypto.a in Frameworks */,
-				74FDEFEE206000F90085132E /* libthird-party.a in Frameworks */,
-				74FDEFF0206000F90085132E /* libReactNativeConfig.a in Frameworks */,
-				745ED0392072F23A00026625 /* FirebaseCore.framework in Frameworks */,
-				74FDEFF1206000F90085132E /* Protobuf.framework in Frameworks */,
-				745ED0412072F23A00026625 /* FirebaseMessaging.framework in Frameworks */,
-				74FDEFF3206000F90085132E /* libRNSentry.a in Frameworks */,
-				74FDEFF4206000F90085132E /* libSMXCrashlytics.a in Frameworks */,
-				74FDEFF6206000F90085132E /* libRCTAnimation.a in Frameworks */,
-				74FDEFF8206000F90085132E /* libReactNativeNavigation.a in Frameworks */,
-				74FDEFF9206000F90085132E /* Crashlytics.framework in Frameworks */,
-				74FDEFFA206000F90085132E /* libReact.a in Frameworks */,
-				74FDEFFB206000F90085132E /* libRCTActionSheet.a in Frameworks */,
-				74FDEFFC206000F90085132E /* nanopb.framework in Frameworks */,
-				74FDEFFD206000F90085132E /* libRCTGeolocation.a in Frameworks */,
-				74FDEFFE206000F90085132E /* libRCTImage.a in Frameworks */,
-				74FDEFFF206000F90085132E /* libRCTLinking.a in Frameworks */,
-				745ED04D2072F23A00026625 /* FirebaseCoreDiagnostics.framework in Frameworks */,
-				745ED0452072F23A00026625 /* FirebaseNanoPB.framework in Frameworks */,
-				74FDF001206000F90085132E /* libRCTNetwork.a in Frameworks */,
-				74FDF002206000F90085132E /* libRCTSettings.a in Frameworks */,
-				74FDF003206000F90085132E /* libRCTText.a in Frameworks */,
-				745ED03D2072F23A00026625 /* FirebaseAnalytics.framework in Frameworks */,
-				74FDF004206000F90085132E /* Fabric.framework in Frameworks */,
-				74FDF005206000F90085132E /* libRCTVibration.a in Frameworks */,
-				74FDF006206000F90085132E /* libRCTWebSocket.a in Frameworks */,
-				74FDF007206000F90085132E /* GoogleToolboxForMac.framework in Frameworks */,
-				745ED0492072F23A00026625 /* FirebaseInstanceID.framework in Frameworks */,
-				74FDF00A206000F90085132E /* libRNSVG.a in Frameworks */,
-				74FDF00B206000F90085132E /* libTcpSockets.a in Frameworks */,
-				74FDF00D206000F90085132E /* libz.tbd in Frameworks */,
-				74FDF00E206000F90085132E /* libRNDeviceInfo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1158,8 +988,6 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* QuidWallet.app */,
 				74F4EDD81FD56E000047A2E4 /* Q-DEV.app */,
-				74F4EE2B1FD5706D0047A2E4 /* Q-STAGING.app */,
-				74FDF01F206000F90085132E /* Q-ROPSTEN.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1235,48 +1063,6 @@
 			productReference = 74F4EDD81FD56E000047A2E4 /* Q-DEV.app */;
 			productType = "com.apple.product-type.application";
 		};
-		74F4EE051FD5706D0047A2E4 /* Q-STAGING */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 74F4EE271FD5706D0047A2E4 /* Build configuration list for PBXNativeTarget "Q-STAGING" */;
-			buildPhases = (
-				74F4EE071FD5706D0047A2E4 /* Sources */,
-				74F4EE0A1FD5706D0047A2E4 /* Frameworks */,
-				74F4EE211FD5706D0047A2E4 /* Resources */,
-				747324351FDEC2C5000ED79E /* Copy Firebase Config */,
-				74F4EE241FD5706D0047A2E4 /* Bundle React Native code and images */,
-				74136DAD1FD9A81100AE7B98 /* Run Fabric */,
-				7432D5DE1FD9F5EA0036FAE6 /* Upload Debug Symbols to Sentry */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Q-STAGING";
-			productName = "Hello World";
-			productReference = 74F4EE2B1FD5706D0047A2E4 /* Q-STAGING.app */;
-			productType = "com.apple.product-type.application";
-		};
-		74FDEFE9206000F90085132E /* Q-ROPSTEN */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 74FDF01B206000F90085132E /* Build configuration list for PBXNativeTarget "Q-ROPSTEN" */;
-			buildPhases = (
-				74FDEFEA206000F90085132E /* Sources */,
-				74FDEFED206000F90085132E /* Frameworks */,
-				74FDF00F206000F90085132E /* Resources */,
-				74FDF017206000F90085132E /* Copy Firebase Config */,
-				74FDF018206000F90085132E /* Bundle React Native code and images */,
-				74FDF019206000F90085132E /* Run Fabric */,
-				74FDF01A206000F90085132E /* Upload Debug Symbols to Sentry */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Q-ROPSTEN";
-			productName = "Hello World";
-			productReference = 74FDF01F206000F90085132E /* Q-ROPSTEN.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1309,22 +1095,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					74F4EE051FD5706D0047A2E4 = {
-						DevelopmentTeam = 75WDJA7UZQ;
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
-					};
-					74FDEFE9206000F90085132E = {
-						DevelopmentTeam = 75WDJA7UZQ;
-						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -1437,8 +1207,6 @@
 			targets = (
 				74F4EDB21FD56E000047A2E4 /* Q-DEV */,
 				13B07F861A680F5B00A75B9A /* QuidWallet */,
-				74F4EE051FD5706D0047A2E4 /* Q-STAGING */,
-				74FDEFE9206000F90085132E /* Q-ROPSTEN */,
 			);
 		};
 /* End PBXProject section */
@@ -1839,34 +1607,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74F4EE211FD5706D0047A2E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				745536B92022273C00E1CABD /* EvilIcons.ttf in Resources */,
-				745536B82022273000E1CABD /* FontAwesome.ttf in Resources */,
-				745536B72022272900E1CABD /* MaterialIcons.ttf in Resources */,
-				74F4EE221FD5706D0047A2E4 /* Images.xcassets in Resources */,
-				747324341FDEBFB8000ED79E /* firebaseConfigs in Resources */,
-				74F151EE1FD6DC1000A11B4F /* LaunchScreen.storyboard in Resources */,
-				7455366E2021EFD500E1CABD /* preloader@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74FDF00F206000F90085132E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74FDF010206000F90085132E /* EvilIcons.ttf in Resources */,
-				74FDF011206000F90085132E /* FontAwesome.ttf in Resources */,
-				74FDF012206000F90085132E /* MaterialIcons.ttf in Resources */,
-				74FDF013206000F90085132E /* Images.xcassets in Resources */,
-				74FDF014206000F90085132E /* firebaseConfigs in Resources */,
-				74FDF015206000F90085132E /* LaunchScreen.storyboard in Resources */,
-				74FDF016206000F90085132E /* preloader@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1911,20 +1651,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" 19811d6651c4fa65c7999de2a79771fdcac68bdd fa212e933eb68080216dca769ce4cd6d18045c980d89be73b2d44a090f611187";
 		};
-		74136DAD1FD9A81100AE7B98 /* Run Fabric */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Fabric";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" 19811d6651c4fa65c7999de2a79771fdcac68bdd fa212e933eb68080216dca769ce4cd6d18045c980d89be73b2d44a090f611187";
-		};
 		7432D5DD1FD9F5D00036FAE6 /* Upload Debug Symbols to Sentry */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1939,20 +1665,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export SENTRY_PROPERTIES=sentry.properties\n../node_modules/sentry-cli-binary/bin/sentry-cli upload-dsym";
 		};
-		7432D5DE1FD9F5EA0036FAE6 /* Upload Debug Symbols to Sentry */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Upload Debug Symbols to Sentry";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export SENTRY_PROPERTIES=sentry-staging.properties\n../node_modules/sentry-cli-binary/bin/sentry-cli upload-dsym";
-		};
 		747324301FDEBD49000ED79E /* Copy Firebase Config */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1966,20 +1678,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "cp -r \"${PROJECT_DIR}/QuidWallet/firebaseConfigs/GoogleService-Info-DEBUG.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"DEBUG Firebase plist copied\"";
-		};
-		747324351FDEC2C5000ED79E /* Copy Firebase Config */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Firebase Config";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -r \"${PROJECT_DIR}/QuidWallet/firebaseConfigs/GoogleService-Info-STAGING.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"DEBUG Firebase plist copied\"";
 		};
 		747324361FDEC2F5000ED79E /* Copy Firebase Config */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2009,76 +1707,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export SENTRY_PROPERTIES=sentry.properties\nexport NODE_BINARY=node\n../node_modules/sentry-cli-binary/bin/sentry-cli react-native xcode ../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		74F4EE241FD5706D0047A2E4 /* Bundle React Native code and images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native code and images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export SENTRY_PROPERTIES=sentry-staging.properties\nexport NODE_BINARY=node\n../node_modules/sentry-cli-binary/bin/sentry-cli react-native xcode ../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		74FDF017206000F90085132E /* Copy Firebase Config */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Firebase Config";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cp -r \"${PROJECT_DIR}/QuidWallet/firebaseConfigs/GoogleService-Info-ROPSTEN.plist\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/GoogleService-Info.plist\"\necho \"DEBUG Firebase plist copied\"";
-		};
-		74FDF018206000F90085132E /* Bundle React Native code and images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native code and images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export SENTRY_PROPERTIES=sentry-staging.properties\nexport NODE_BINARY=node\n../node_modules/sentry-cli-binary/bin/sentry-cli react-native xcode ../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		74FDF019206000F90085132E /* Run Fabric */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Fabric";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" 19811d6651c4fa65c7999de2a79771fdcac68bdd fa212e933eb68080216dca769ce4cd6d18045c980d89be73b2d44a090f611187";
-		};
-		74FDF01A206000F90085132E /* Upload Debug Symbols to Sentry */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Upload Debug Symbols to Sentry";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export SENTRY_PROPERTIES=sentry-staging.properties\n../node_modules/sentry-cli-binary/bin/sentry-cli upload-dsym";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2097,24 +1725,6 @@
 			files = (
 				74F4EDB51FD56E000047A2E4 /* AppDelegate.m in Sources */,
 				74F4EDB61FD56E000047A2E4 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74F4EE071FD5706D0047A2E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74F4EE081FD5706D0047A2E4 /* AppDelegate.m in Sources */,
-				74F4EE091FD5706D0047A2E4 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		74FDEFEA206000F90085132E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74FDEFEB206000F90085132E /* AppDelegate.m in Sources */,
-				74FDEFEC206000F90085132E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2477,320 +2087,6 @@
 			};
 			name = Staging;
 		};
-		74F4EE281FD5706D0047A2E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-staging";
-				CODE_SIGN_ENTITLEMENTS = "Q-STAGING.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 75WDJA7UZQ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Firebase",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-randombytes",
-					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
-					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-fabric/ios/SMXCrashlytics",
-					"$(SRCROOT)/../node_modules/react-native-sentry/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-fast-crypto/ios/**",
-				);
-				INFOPLIST_FILE = QuidWallet/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-STAGING";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ce7a663-e608-4756-8d7a-ae6ae5449b5d";
-				PROVISIONING_PROFILE_SPECIFIER = QuidStaging;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		74F4EE291FD5706D0047A2E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-staging";
-				CODE_SIGN_ENTITLEMENTS = "Q-STAGING.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 75WDJA7UZQ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Firebase",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-randombytes",
-					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
-					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-fabric/ios/SMXCrashlytics",
-					"$(SRCROOT)/../node_modules/react-native-sentry/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-fast-crypto/ios/**",
-				);
-				INFOPLIST_FILE = QuidWallet/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-STAGING";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ce7a663-e608-4756-8d7a-ae6ae5449b5d";
-				PROVISIONING_PROFILE_SPECIFIER = QuidStaging;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		74F4EE2A1FD5706D0047A2E4 /* Staging */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-staging";
-				CODE_SIGN_ENTITLEMENTS = "Q-STAGING.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 75WDJA7UZQ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Firebase",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-randombytes",
-					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
-					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-fabric/ios/SMXCrashlytics",
-					"$(SRCROOT)/../node_modules/react-native-sentry/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-fast-crypto/ios/**",
-				);
-				INFOPLIST_FILE = QuidWallet/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-STAGING";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8ce7a663-e608-4756-8d7a-ae6ae5449b5d";
-				PROVISIONING_PROFILE_SPECIFIER = QuidStaging;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Staging;
-		};
-		74FDF01C206000F90085132E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-ropsten";
-				CODE_SIGN_ENTITLEMENTS = "Q-STAGING.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = 75WDJA7UZQ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Firebase",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-randombytes",
-					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
-					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-fabric/ios/SMXCrashlytics",
-					"$(SRCROOT)/../node_modules/react-native-sentry/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-fast-crypto/ios/**",
-				);
-				INFOPLIST_FILE = QuidWallet/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-ROPSTEN";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f216de35-bdd1-4718-ab36-720b2f53eaf1";
-				PROVISIONING_PROFILE_SPECIFIER = "QuidWallet-ROPSTEN";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		74FDF01D206000F90085132E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-ropsten";
-				CODE_SIGN_ENTITLEMENTS = "Q-STAGING.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 75WDJA7UZQ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Firebase",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-randombytes",
-					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
-					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-fabric/ios/SMXCrashlytics",
-					"$(SRCROOT)/../node_modules/react-native-sentry/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-fast-crypto/ios/**",
-				);
-				INFOPLIST_FILE = QuidWallet/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-ROPSTEN";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f216de35-bdd1-4718-ab36-720b2f53eaf1";
-				PROVISIONING_PROFILE_SPECIFIER = "QuidWallet-ROPSTEN";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		74FDF01E206000F90085132E /* Staging */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-ropsten";
-				CODE_SIGN_ENTITLEMENTS = "Q-STAGING.entitlements";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 75WDJA7UZQ;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/Firebase",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-randombytes",
-					"$(SRCROOT)/../node_modules/react-native-svg/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-tcp/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
-					"$(SRCROOT)/../node_modules/react-native-device-info/RNDeviceInfo",
-					"$(SRCROOT)/../node_modules/react-native-fabric/ios/SMXCrashlytics",
-					"$(SRCROOT)/../node_modules/react-native-sentry/ios/**",
-					"$(SRCROOT)/../node_modules/react-native-config/ios/ReactNativeConfig",
-					"$(SRCROOT)/../node_modules/react-native-firebase/ios/RNFirebase/**",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-fast-crypto/ios/**",
-				);
-				INFOPLIST_FILE = QuidWallet/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-					"\"$(SRCROOT)/QuidWallet\"",
-				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					"-ObjC",
-					"-lc++",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-ROPSTEN";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f216de35-bdd1-4718-ab36-720b2f53eaf1";
-				PROVISIONING_PROFILE_SPECIFIER = "QuidWallet-ROPSTEN";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Staging;
-		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2903,26 +2199,6 @@
 				74F4EDD51FD56E000047A2E4 /* Debug */,
 				74F4EDD61FD56E000047A2E4 /* Release */,
 				74F4EDD71FD56E000047A2E4 /* Staging */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		74F4EE271FD5706D0047A2E4 /* Build configuration list for PBXNativeTarget "Q-STAGING" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				74F4EE281FD5706D0047A2E4 /* Debug */,
-				74F4EE291FD5706D0047A2E4 /* Release */,
-				74F4EE2A1FD5706D0047A2E4 /* Staging */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		74FDF01B206000F90085132E /* Build configuration list for PBXNativeTarget "Q-ROPSTEN" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				74FDF01C206000F90085132E /* Debug */,
-				74FDF01D206000F90085132E /* Release */,
-				74FDF01E206000F90085132E /* Staging */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
