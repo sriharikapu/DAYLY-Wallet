@@ -42,12 +42,11 @@ export async function derivePkFromKeystore({keystore, password}) {
     return pk;
 }
 
-async function signTx({keystore, password, txParams}) {
-    let privateKey = await derivePkFromKeystore({keystore, password});
-
+export function signTx({privateKey, txParams}) {
+    
     const tx = new EthTx(txParams);
-    tx.sign(privateKey);
-
+    tx.sign(new Buffer(privateKey, 'hex'));
+    
     privateKey = null;
     const signedTx = `0x${tx.serialize().toString('hex')}`;
     return signedTx;

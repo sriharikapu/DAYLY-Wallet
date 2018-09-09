@@ -29,6 +29,8 @@ class AddWalletScreen extends React.Component {
 		    await this.props.createMetaAccount(email);		
 		    this.setState({ isDeployingAccount: true });
 		} catch (error) {
+		    throw error;
+		    console.log(error);
 		    this.setState({ error: error.message, isDeployingAccount: false });		
 		}
 		    
