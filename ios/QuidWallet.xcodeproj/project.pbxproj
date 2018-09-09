@@ -1971,7 +1971,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-DEV";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dailywallet-DEV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2025,7 +2025,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-DEV";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dailywallet-DEV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2079,7 +2079,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.quidwallet.QuidWallet-DEV";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dailywallet-DEV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
