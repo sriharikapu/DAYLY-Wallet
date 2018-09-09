@@ -4,7 +4,7 @@ import { StyleSheet, Platform } from 'react-native';
 export default StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#242836',
+		backgroundColor: '#fff',
 	},
 	avatarWallet: {
 		flex: 1,

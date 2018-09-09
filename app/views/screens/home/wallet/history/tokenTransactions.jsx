@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, FlatList } from 'react-native';
+import { Text, View, FlatList, RefreshControl } from 'react-native';
 import { connect } from 'react-redux';
 import { fetchTokenTransactions } from 'quid-wallet/app/actions/transactions';
 import { getAssetTransfers } from 'quid-wallet/app/data/selectors';

@@ -6,7 +6,9 @@ import {
     View,
     Clipboard,
     Alert,
-    TouchableOpacity
+    TouchableOpacity,
+    ScrollView,
+    RefreshControl
 } from 'react-native';
 import QRCode from 'react-native-qrcode';
 
@@ -20,6 +22,7 @@ import {
 } from 'quid-wallet/app/data/selectors';
 import { formatToCurrency } from 'quid-wallet/app/utils';
 import { Navigation } from 'react-native-navigation';
+import { _fetchTokenBalance } from 'quid-wallet/app/actions/wallet/common/fetchWalletTokens';
 
 
 class ReceiveScreen extends React.Component {    
@@ -30,19 +33,26 @@ class ReceiveScreen extends React.Component {
     }
 
     state = {
-	balanceHidden: true
+	balanceHidden: true,
+	balance: 0,
+	fetching: true
     }
 
     componentDidMount() {
+	this._fetchData()
     }
     
     async _fetchData() {	
-	const { fetchWalletTokens,
+	const { 
 		wallet, navigator } = this.props;
 
 	try { 	    
-	    await fetchWalletTokens(wallet.address);
+	    let { balance } = await _fetchTokenBalance(wallet.address, '0x0566c17c5e65d760243b9c57717031c708f13d26');
+	    balance = balance / 100;
+	    this.setState({balance, fetching: false});
 	} catch(err){
+	    console.log(err);
+	    this.setState({fetching: false});	    
 	    navigator.showInAppNotification({
 		screen: "quidwallet.components.Notification", // unique ID registered with Navigation.registerScreen
 		passProps: {}, // simple serializable object that will pass as props to the lightbox (optional)
@@ -62,12 +72,14 @@ class ReceiveScreen extends React.Component {
 
     render() {
 	return (
-	    <View style={styles.container}>
+	    <ScrollView
+	       refreshControl={<RefreshControl refreshing={this.state.fetching} onRefresh={() => this._fetchData()}/>}
+	       style={styles.container}>
 	      <View style={styles.androidBottomMargin}>
 		<TransparentNavBar navigator={this.props.navigator} title="Wallet" />
 	      </View>
 	      { this._renderContent() }
-	    </View>
+	    </ScrollView>
 	)
     }
 
@@ -105,7 +117,7 @@ class ReceiveScreen extends React.Component {
     }
 
     _renderBalanceDigit() {
-	const balance  = formatToCurrency(this.props.totalBalance, this.props.currency);	
+	const balance  = formatToCurrency(this.state.balance, 'USD');	
 	return (
 	    <Text style={{ color: '#02BF19', padding: 10, fontSize: 20, fontWeight: 'bold' }}>{balance}</Text>
 	)

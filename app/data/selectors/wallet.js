@@ -51,10 +51,15 @@ export const getActiveWalletTokens = createSelector(
 	 
 	 const walletTokensExtended = walletTokenFiltered.map(({tokenAddress, qnty, rawQnty}, index) => {
 	     const token = tokensDct[tokenAddress] || {};
+
 	     
-	     const { price, priceChangePerc,
-		     priceChangeAbs, timestamp } = getMarketDataForToken(token.cc_ticker, marketData, currency);
-	     	     
+	     let { price, priceChangePerc,
+		     priceChangeAbs, timestamp } = getMarketDataForToken('DAI', marketData, currency);
+
+	     if (tokenAddress !== '0x0566c17c5e65d760243b9c57717031c708f13d26') {
+		 price = 0;
+	     }
+	     
 	     const balance = price * qnty; // value in fiat
 	     const sortingScore = (token.symbol === 'ETH') ? 999999999999 : balance + 0.0000000001 * index; // put ether on the first place, than according to balance
 

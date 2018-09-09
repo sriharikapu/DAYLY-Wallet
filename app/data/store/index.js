@@ -11,7 +11,7 @@ const enhancers = compose(applyMiddleware(thunk));
 const createPersistConfig = (key, version=0) => ({
     storage,
     version,
-    keyPrefix: 'COMMIE_v01_',
+    keyPrefix: 'COMMIE_v02_',
     key,
     debug: true, 
     migrate: (state) => {
@@ -21,7 +21,7 @@ const createPersistConfig = (key, version=0) => ({
 	}
 	// otherwise migrate from old key
 	return new Promise(resolve => {
-	    AsyncStorage.getItem("COMMIE_v01_primary")	    
+	    AsyncStorage.getItem("COMMIE_v02_primary")	    
     		.then(value => JSON.parse(value))
 		.then(value => {
 		    let migratedState;

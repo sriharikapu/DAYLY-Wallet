@@ -23,7 +23,7 @@ async function _fetchEtherBalance(address) {
 }
 
 
-async function _fetchTokenBalance(address, tokenAddress) {
+export async function _fetchTokenBalance(address, tokenAddress) {
     let balance;
     try {
 	balance = await web3Service.getTokenBalance(address, tokenAddress);

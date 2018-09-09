@@ -9,13 +9,14 @@ import { getActiveWallet } from 'quid-wallet/app/data/selectors';
 
 const styles = StyleSheet.create({
     navbarContainer: {
-	height: 49,
+	height: 69,
+	backgroundColor: '#242836',
+
 	...Platform.select({
 	    ios: {
 		...ifIphoneX({
 		    marginTop: 30
 		}, {
-		    marginTop: 20
 		})
 	    },
 	    android: {
@@ -24,11 +25,11 @@ const styles = StyleSheet.create({
 	}),
     },
     navbar: {
-	backgroundColor: 'transparent',
 	flex: 1,
 	flexDirection: 'row',
         justifyContent: 'space-between',
-	height: 50
+	height: 90,
+	paddingTop: 20	
     },
     title: {
 	marginLeft: -4,
@@ -70,11 +71,8 @@ class TransparentNavBar extends React.PureComponent {
 	    <View style={styles.navbarContainer}>
 	      <View style={styles.navbar}>
 		<SettingsIcon navigator={navigator}/>
-		  <Text style={[human.bodyWhite, styles.title]}>{title}</Text>
-		  <CurrencySwitcherIcon navigator={navigator}
-		  color='white'
-				    stylesContainer={{paddingTop: 12, paddingRight: 12}}
-					stylesButton={{}}/>
+		<Text style={[human.bodyWhite, styles.title]}>{title}</Text>
+		<View/>
 	      </View>
 	    </View>
 	);
