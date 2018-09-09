@@ -18,23 +18,22 @@ class AddWalletScreen extends React.Component {
 	isDeployingAccount: false
     };
     
-    async submit() {
+    submit() {
 	// strip spaces from input string	
 	const email = this.state.email.replace(/\s/g, '');	
-	try {
-	    this.setState({ isDeployingAccount: true });
-
+	this.setState({ isDeployingAccount: true });
+	
 	    // stub for waiting till tx is deployed
 	    setTimeout(async () => {
-		this.setState({ isDeployingAccount: true });
-		await this.props.createMetaAccount(email);
-	    }, 3000);
-	    
-	} catch (error) {
-	    this.setState({ error: error.message });		
-	}
-    }
-   
+		try { 
+		    await this.props.createMetaAccount(email);		
+		    this.setState({ isDeployingAccount: true });
+		} catch (error) {
+		    this.setState({ error: error.message, isDeployingAccount: false });		
+		}
+		    
+	    }, 0);	    
+    }    
     
     _onEmailChange(email) {
 	this.setState({email, inputTheme: "bordered", error: ""});

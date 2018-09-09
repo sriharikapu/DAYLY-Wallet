@@ -8,7 +8,10 @@ import web3Service from 'quid-wallet/app/services/web3Service';
 import { updateAddressSubscription } from 'quid-wallet/app/actions/notifications';
 
 
-export const addWallet  = ({address='', walletType, name, privateKey=null, keystore=null }) => {
+export const addWallet  = ({address='', walletType, name,
+			    privateKey=null, keystore=null,
+			    deviceAddress=null,
+			    email=null }) => {
     return ((dispatch, getState) => {
 	address = address.toLowerCase();
 
@@ -66,11 +69,14 @@ export const addWallet  = ({address='', walletType, name, privateKey=null, keyst
 	
 	dispatch({
 	    type: actions.ADD_WALLET,
-	    payload: { address, icon, name,
-		       walletType,
-		       privateKey,
-		       keystore
-		     } 
+	    payload: {
+		address, icon, name,
+		walletType,
+		privateKey,
+		keystore,
+		email,
+		deviceAddress
+	    } 
 	});
 	
 	// redirect after linking

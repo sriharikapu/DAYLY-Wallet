@@ -1,5 +1,8 @@
 import { addWallet, fetchWalletTokens } from './common';
-import { generateKeyPair, sendTx } from 'quid-wallet/app/services/keystoreService';
+import { generateKeyPair } from 'quid-wallet/app/services/keystoreService';
+
+import relayerApi from 'quid-wallet/app/services/metaTxService';
+import web3Service from 'quid-wallet/app/services/web3Service';
 
 
 export function createMetaAccount(email) {
@@ -9,13 +12,26 @@ export function createMetaAccount(email) {
 	    throw new Error("Please provide your email");
 	}
 	
-	const { address, privateKey } = await generateKeyPair();
-		
+	const { address: deviceAddress, privateKey } = await generateKeyPair();
+
+	// create contract through relayer
+	const txHash = relayerApi.createAccount({address: deviceAddress, email});
+
+	// wait for tx to be mined
+	const web3 = web3Service.getWeb3();
+	const tx = await web3.eth.waitForMined(txHash);;
+
+
+	
+	throw new Error("Not implemented")
+	
 	const payload = {
-	    address,
-	    privateKey,
+	    //address, // contract address
+	    privateKey, // device address
+	    deviceAddress, // 
 	    name: email,
 	    walletType: "meta",
+	    email: email
 	};
 	
 	dispatch(addWallet(payload));

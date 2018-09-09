@@ -23,10 +23,12 @@ export default class Wallet extends Model {
 	    const {
 		address,
 		icon,
-		name,		
+		name,
+		deviceAddress,
 		walletType,
 		privateKey,
-		keystore
+		keystore,
+		email
 	    } = action.payload;
 	    if (!model.hasId(address)) {
 		return model.create({
@@ -34,6 +36,8 @@ export default class Wallet extends Model {
 		    address,
 		    icon,
 		    name,
+		    email,
+		    deviceAddress,
 		    walletType,
 		    keystore,
 		    privateKey
