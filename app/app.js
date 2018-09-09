@@ -4,8 +4,7 @@ import { Navigation } from 'react-native-navigation';
 import { Provider } from 'react-redux';
 import store from './data/store';
 import registerScreens from './views/screens';
-
-
+import { claimTokens } from './actions/app';
 
 registerScreens(store, Provider);
 
@@ -21,19 +20,19 @@ export default class App extends React.Component {
 	//     }
 	// });
 	
-    // 	Linking.addEventListener('url', this.handleOpenURL);
-    // 	//this.startApp('WebView');
-    // }
+		Linking.addEventListener('url', this.handleOpenURL);
+	// 	//this.startApp('WebView');
+    }
     
-    // handleOpenURL = (event) => {
-    // 	if (event && event.url) {
-    // 	    //
-    // 	    // redirect here
-	    //store.dispatch(redirectToUrl(event.url));
-	    //this.startApp('WebView', event);
+    handleOpenURL = (event) => {
+    	if (event && event.url) {
+    	    //
+    	    // redirect here
+	    console.log({event})
+	    store.dispatch(claimTokens(event.url));
 	}
-///}
-
+    }
+    
     
     onStoreUpdate() {
 	const state = store.getState();

@@ -1,6 +1,13 @@
 import Config from 'react-native-config';
 import { getTokenWithMarketInfo } from 'quid-wallet/app/data/selectors';
 import FabricService from 'quid-wallet/app/services/FabricService';
+import { Navigation } from 'react-native-navigation';
+import {
+    getActiveWalletTotalBalance,
+    getActiveWallet,
+    getSelectedCurrency
+} from 'quid-wallet/app/data/selectors';
+
 
 
 export const actions = {
@@ -111,4 +118,30 @@ export function selectScreen(screenId) {
 	    screenId
 	}
      };
+}
+
+
+
+export function claimTokens(url) {
+    return (dispatch, getState) => {
+	const host = 'http://localhost:3000';
+
+	const wallet = getActiveWallet(getState());
+	const tokenAddress = '0x89d24a6b4ccb1b6faa2625fe562bdd9a23260359'; // DAI
+	const claimAmount = 4;
+
+	// #TODO parse transactions
+	const keyParams = '/#/r?v=27&r=0x58cef4e86bdb828fa3f481dc2d3bb5b7e003a6d1a9802f4119e5ea528887f6c4&s=0x7e20c4f3336f235d03f65f2a7592fc79d5123717fc444ad548bdb64634bbd32e&pk=4daa6a4544364d506255944b6933598d52e3ff7caf5a39c8c61d0e184ec6dbc8&c=0x8812948b5a967cf33013f3fd83da9250d3968e78';
+	const injectedParams = `&claimAmount=${claimAmount}&tokenSymbol=DAI&tokenAddress=${tokenAddress}&claimAddress=${wallet.address}`;
+	
+	const uri = host + keyParams + injectedParams;
+	console.log(uri);
+	Navigation.showModal({
+	    screen: 'quidwallet.home.wallet.settings.WebviewScreen', // unique ID registered with Navigation.registerScreen
+	    title: 'Claim Dollars', // title of the screen as appears in the nav bar (optional)
+	    passProps: { source: { uri }},
+	    navigatorStyle: {}, // override the navigator style for the screen, see "Styling the navigator" below (optional)
+	    animationType: 'slide-up' // 'none' / 'slide-up' , appear animation for the modal (optional, default 'slide-up')
+	});
+    };
 }
